@@ -1,0 +1,37 @@
+ERD Diagram for ETL Project 2
+
+
+Campaign    
+-
+cf_id PK int
+contact_id int FK >- contacts.contact_id
+company_name varchar   
+description varchar
+goal float
+pledged float
+outcome varchar
+backers_count int
+country varchar
+currency varchar
+launched_date date
+end_date date
+category_id varchar FK >- category.category_id
+subcategory_id varchar FK >- subcategory.subcategory_id
+
+category
+-
+category_id PK varchar
+category varchar
+
+
+contacts
+-
+contact_id PK int
+first_name varchar
+last_name varchar
+email varchar
+
+subcategory
+-
+subcategory_id PK varchar
+subcategory varchar
